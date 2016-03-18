@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+}
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+.wrap {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.clearfix {
+    clear: both;
+}
+.border {
+    width: 42px;
+    height: 2px;
+    background-color: #cbcbcb;
+    margin: 32px auto;     
+}
+.border-red {
+    width: 65px;
+    height: 3px;
+    background-color: #C41230;
+    margin: 30px auto 65px;
+}
+.d-1of3 {
+    width: 33.33333333333333%;
+    float: left;
+}
+.d-2of3 {    
+    width: 66.66666666666666%;
+    float: left;
+}
+
+/*--------------------
+    HEADER
+--------------------*/
+.header {
+    background-color: #F2ECE0;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.header li a {
+    display: block;
+    margin: 20px 20px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #333333;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.header .logo {
+    display: block;
+    float: left;
+    padding: 15px 20px;
+}
+.header .logo img {
+    width: 80%
+}
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+}
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.header .menu-icon .navicon:before {
+    top: 4px;
+}
+.header .menu-icon .navicon:after {
+    top: -4px;
+}
+.header .menu-btn {
+    display: none;
+}
+.header .menu-btn:checked ~ .menu {
+    max-height: 280px;  
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/*--------------------
+    HERO-BLOCK
+--------------------*/
+.hero-block {
+    background: url("../images/diwanee-cover.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;   
+    text-align: center;
+}
+.hero-block h1 {
+    font-weight: 600;
+    font-size: 120px;
+    color: #333;
+    letter-spacing: 1px;
+}
+.hero-block p {
+    font-weight: 400;
+    font-size: 30px;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+.hero-block .hero-text {
+    padding-top: 155px;
+    padding-bottom: 260px;
+}
+
+/*--------------------
+    EXPECTATIONS
+--------------------*/
+.expectations {
+    display: inline-block;
+}
+.triangle-box, .square-box {
+    background-color: #fbfbfb;
+}
+.gray-box {
+     background-color: #ededed;
+}
+.exp-box {
+    padding: 150px 40px 100px;
+    text-align: center;
+    min-height: 610px;
+}
+.exp-box h2 {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 24px; 
+    color: #333333;
+    letter-spacing: 4px;
+    line-height: 30px;
+}
+.exp-desc p, .about-us p {
+    color: #898d90;
+    line-height: 24px;       
+}
+.about-us p {
+    text-align: justify;
+}
+
+/*--------------------
+    OPEN POSITIONS
+--------------------*/
+.open-positions, .about-us {
+    padding: 140px 0;
+}
+.open-positions .positions-desc {
+    text-align: center;
+    margin-bottom: 65px;
+}
+.positions-desc h3, .about-us h3, .social-box h3 {
+    font-weight: 400;
+    font-size: 13px;
+    color: #adacb4;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+.positions-desc h1, .about-us h1 {
+    font-weight: 600;
+    font-size: 60px;
+    color: #333;
+    letter-spacing: 3px;
+    line-height: 75px;
+}
+.positions-desc p {
+    font-weight: 300;
+    font-size: 36px;
+    color: #333333;
+    line-height: 50px;
+}
+.single-job {
+    display: block;
+    overflow: hidden;
+    padding: 65px 0 85px;
+}
+.single-job h2 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #333333;
+    letter-spacing: 2.33px;
+    line-height: 36px;
+}
+.job-cont {
+    max-width: 1050px;
+    margin: 0 auto;    
+}
+.single-desc {
+    padding: 40px 0;
+}
+.single-desc p {
+    font-weight: 300;
+    font-size: 24px;
+    color: #888;
+    line-height: 34px;
+}
+.tag-btn {
+    font-weight: 400;
+    font-size: 16px;
+    color: #C41230;
+    letter-spacing: 2px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #cdcdcd;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+.job-btn {
+    font-weight: 600;
+    border: 1px solid #979797;
+    font size:  18px;
+    color: #333;
+    letter-spacing: 2px;
+    line-height: 23px;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 45px;
+    margin-top: 70px;
+    float: right;
+}
+.gray-bc {
+    background-color: #333333;
+}
+.gray-bc h2 {
+    color: #fff;    
+}
+.gray-bc .tag-btn, .gray-bc .job-btn {
+    background-color: #333333;
+    color: #fff;
+}
+.read-more {
+    text-align: center;
+    padding: 60px 0;
+}
+.read-more .job-btn {
+    float: none;
+    margin: 0px;
+} 
+
+/*--------------------
+    ABOUT US
+--------------------*/
+.about-us {
+    background-color: #fbfbfb;    
+    text-align: center;
+}
+.about-desc {
+    max-width: 700px;
+    text-align: left;
+}
+
+/*--------------------
+    SOCIAL BOX
+--------------------*/
+.social-box {
+    padding: 100px 0;
+    text-align: center;
+}
+.social-box .twitt {
+    margin-right: 10px;
+}
+
+/*--------------------
+    SOCIAL BOX
+--------------------*/
+.footer-top {
+    background-color: #2d2d2d;
+}
+.footer-top h4 {
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    background: url("../images/place-pin-ico.png") no-repeat;
+    padding: 5px 0 3px 35px;
+    margin-bottom: 20px;
+}
+.footer-top p {
+    font-weight: 300;
+    font-size: 18px;
+    color: #9B9B9B;
+    line-height: 28px;
+}
+.footer-bottom {
+    padding: 30px 0;
+    background-color: #242424;
+}
+.footer-bottom p {
+    font-weight: 300;
+    font-size: 12px;
+    color: #5B5B5B;
+    letter-spacing: 2px;
+}
+.footer-bottom .links i {
+    font-size: 20px;
+    margin-right: 8px;  
+}
+.footer-bottom .links a, .footer-bottom .links a:hover, .footer-bottom .links a:active, .footer-bottom .links a:focus {
+    color: #585a59;
+    vertical-align: top;
+}
+.copyright {
+    float: left;
+}
+.links {
+    float: right;
+}
+
+/*--------------------
+    RESPONSIVE
+--------------------*/
+@media (min-width: 768px) {
+    .wrap {
+        width: 750px;
+    }    
+    .under-tittle {
+        display: none;
+    }
+    .triangle-box {
+        background: #fbfbfb url("../images/triangle-white.png") no-repeat center center;
+        background-position: -310px 55px;
+    }
+    .square-box {
+        background: #fbfbfb url("../images/square-white.png") no-repeat center center;
+        background-position: 310px 55px;
+    }
+    .positions-desc p {
+        padding: 0 15%;
+    }
+    .footer-top {
+        padding: 120px 0;
+    }
+        .header li {
+        float: left;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+    .mob-menu-social {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .wrap {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .m-3of3, .m-2of3 {
+        width: 100%;
+    }    
+    .hero-block p {
+        display: none;
+    }
+    .under-tittle {
+        display: block;
+    }
+    .hero-block h1 {
+        font-size: 30px;
+    }
+    .header .logo img {
+        width: 70%;
+    }
+    .header .logo {
+        padding: 15px 0px 15px 20px;        
+    }
+    .border-red {
+        width: 35px;
+        margin: 20px auto 30px;
+    }
+    .header-cont {
+        padding: 20px 15px;
+    }
+    .under-tittle {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .exp-box h2 {
+        font-size: 12px;
+    }
+    p {
+        font-size: 9px;
+    }
+    .exp-box {
+        padding: 40px 15px;
+        min-height: auto;
+    }
+    .exp-box img {
+        width: 25%;
+    }
+    .exp-box h2 {
+        margin-top: 15px;
+    }
+    .border {
+        margin: 16px auto;
+    }
+    .positions-desc h1, .about-us h1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .positions-desc p {
+        font-size: 11px;
+        line-height: 15px;
+    }
+    .open-positions, .about-us {
+        padding: 30px 0;
+    }
+    .open-positions .positions-desc {
+        margin-bottom: 20px;
+    }
+    .single-job {
+        padding: 20px 15px;
+        background-color: #f8f7f5;
+    }
+    .single-job h2, .single-desc p {
+        font-size: 8px;
+        line-height: 12px;  
+    }
+    .single-desc {
+        padding: 10px 0;
+    }
+    .tag-btn {
+        font-size: 7px;
+        border: none;
+        padding: 0;
+        margin-right: 5px;
+        background: none;
+    }
+    .single-job .job-btn {
+        display: none;
+    }
+    .gray-bc {
+        background-color: #fff;
+    }
+    .gray-bc h2 {
+        color: #000;
+    }
+    .gray-bc .tag-btn {
+        background: none;
+        color: #C41230;
+    }
+    .job-btn {
+        font-size: 7px;
+        line-height: 11px;
+        display: block;
+    }
+    .read-more {
+        padding: 40px 15px;
+    }
+    .exp-desc p, .about-us p {
+        line-height: 15px;
+    }
+    .social-box {
+        padding: 50px 0;
+    }
+    .social-box img {
+        width: 20%;
+    }
+    .footer-top {
+        padding: 60px 0;
+        text-align: center;
+    }
+    .footer-top h4 {
+        display: inline-block;
+        font-size: 9px;
+        padding: 10px 0 10px 25px;
+        background-size: 15px;
+        margin-bottom: 10px;
+    }
+    .footer-top .single-city {
+        margin-bottom: 35px;
+    }
+    .footer-top .single-city:last-child {
+        margin-bottom: 0;
+    }
+    .footer-bottom {
+        padding: 0;
+        background: none;
+    }
+    .footer-bottom .wrap {
+        padding: 0;
+    }
+    .footer-bottom div {
+        float: none;
+        text-align: center;
+    }
+    .links {
+        padding: 20px 15px;
+        background-color: #242424;
+    }
+    .copyright {
+        padding: 10px 15px;
+        background-color: #2d2d2d;
+    }
+    .footer-top p {
+        font-size: 9px; 
+        line-height: 15px;
+    }
+    .footer-bottom p, .footer-bottom a {
+        font-size: 6px;
+    }
+    .footer-bottom .links i {
+        font-size: 14px;
+    }
+    .footer-bottom .links a {
+        vertical-align: middle;
+    }
+    .header {
+        background: transparent;
+    }
+    .header ul {
+        text-align: center;
+        background:#363636;
+        opacity: 0.8;
+    }
+    .header .wrap {
+       padding: 0;
+    }
+    .header li a {
+        margin: 0;
+        padding: 25px 20px;
+        border-bottom: 1px solid #414141;
+        color: #fff;
+    }
+    .header li.mob-menu-social a {
+        padding: 0;
+        display: inline-block;
+        border: none;
+        color: #9a9c9b;
+        float: right;
+        margin-right: 10px;
+    }
+    .header li.mob-menu-social {
+        padding: 25px 20px;
+    }
+    .mob-social-text {
+        text-transform: uppercase;
+        color: #9a9c9b;
+        font-weight: 400;
+        letter-spacing: 2px;
+        float: left;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .header .menu-icon {
+        padding: 28px 20px 28px 0;
+    }
+}
+@media (min-width: 992px) {
+    .wrap {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .wrap {
+        width: 945px;
+    }
+    .hero-block p {
+        padding: 0 20%;
+    }
+}
+@media (min-width: 1300px) {
+    .wrap {
+        width: 1100px;
+    }
+}
